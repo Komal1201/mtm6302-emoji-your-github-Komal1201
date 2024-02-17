@@ -1,0 +1,16 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.emoji-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.emoji-item {
+    margin: 10px;
+    font-size: 24px;
+}
