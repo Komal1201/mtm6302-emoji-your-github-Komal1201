@@ -9,6 +9,6 @@ const emojis = [
 emojis.forEach(emoji => {
     const emojiItem = document.createElement('div');
     emojiItem.classList.add('emoji-item');
-    emojiItem.innerHTML = `${emoji}`;
+    emojiItem.innerHTML = '${emoji}';
     emojiGallery.appendChild(emojiItem);
 });
