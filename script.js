@@ -9,5 +9,6 @@ const emojis = [
 emojis.forEach(emoji => {
     const emojiItem = document.createElement('div');
     emojiItem.classList.add('emoji-item');
+    emojiItem.innerHTML = `${emoji} ${emoji.codePointAt(0).toString(16).toUpperCase()}`;
     emojiGallery.appendChild(emojiItem);
 });
