@@ -1,16 +1,53 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1a1919;
+  color: aliceblue;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
 }
 
-.emoji-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+code {
+  background-color: #302f2f;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.emoji-container {
+  width: 75%;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
 }
 
 .emoji-item {
-    margin: 10px;
-    font-size: 24px;
+  text-align: center;
+  border: 1px solid #525252;
+  border-radius: 10px;
+  padding-bottom: 40px;
+}
+
+@media only screen and (max-width: 768px) {
+  .emoji-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .emoji-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
 }

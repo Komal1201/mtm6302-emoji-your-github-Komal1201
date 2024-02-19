@@ -1,14 +1,34 @@
-const emojiGallery = document.getElementById('emoji-gallery');
-
 const emojis = [
-    "&#x1F600;", "&#x1F601;", "&#x1F602;", "&#x1F603;",
-    "&#x1F604;", "&#x1F605;", "&#x1F606;", "&#x1F607;",
-    "&#x1F608;", "&#x1F609;", "&#x1F60A;", "&#x1F60B;"
+  { emoji: "&#x1F600;", code: "128512" },
+  { emoji: "&#x1F60D;", code: "128525" },
+  { emoji: "&#x1F618;", code: "128536" },
+  { emoji: "&#x1F92D;", code: "129333" },
+  { emoji: "&#x1F605;", code: "128517" },
+  { emoji: "&#x1F609;", code: "128521" },
+  { emoji: "&#x1F60B;", code: "128523" },
+  { emoji: "&#x1F602;", code: "128514" },
+  { emoji: "&#x1F622;", code: "128546" },
+  { emoji: "&#x1F914;", code: "129300" },
+  { emoji: "&#x1F60E;", code: "128526" },
+  { emoji: "&#x1F609;", code: "128521" },
+  { emoji: "&#x1F604;", code: "128516" },
+  { emoji: "&#x1F60A;", code: "128522" },
+  { emoji: "&#x1F62D;", code: "128557" },
+  { emoji: "&#x1F44D;", code: "128077" },
+  { emoji: "&#x1F44C;", code: "128076" },
+  { emoji: "&#x1F525;", code: "128293" },
+  { emoji: "&#x1F60C;", code: "128524" },
+  { emoji: "&#x1F634;", code: "128564" },
 ];
 
-emojis.forEach(emoji => {
-    const emojiItem = document.createElement('div');
-    emojiItem.classList.add('emoji-item');
-    emojiItem.innerHTML = ${emoji} ${emoji.codePointAt(0).toString(16).toUpperCase()};
-    emojiGallery.appendChild(emojiItem);
+const emojiGallery = document.getElementById("emoji-gallery");
+
+emojis.forEach((emoji) => {
+  const emojiItem = document.createElement("div");
+  emojiItem.classList.add("emoji-item");
+  emojiItem.innerHTML = `
+    <p style="font-size: 2rem;">${emoji.emoji}</p>
+    <code>${emoji.code}</code>
+  `;
+  emojiGallery.appendChild(emojiItem);
 });
